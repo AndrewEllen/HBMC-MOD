@@ -1,5 +1,6 @@
 package hbmcteam.hbmcmod.hbmcmod.entity;
 
+import hbmcteam.hbmcmod.hbmcmod.entity.ai.WatchPlayer;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,7 +17,7 @@ public class EntityHerobrine extends EntityEnderman {
 
     @Override
     public void initEntityAI() {
-        this.tasks.addTask(0, new EntityAIWatchClosest(this, EntityPlayer.class, 10000.0F, 0));
+        this.tasks.addTask(0, new WatchPlayer(this, EntityPlayer.class, 10000.0F));
     }
 
     @Override
