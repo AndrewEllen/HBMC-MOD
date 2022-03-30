@@ -30,6 +30,11 @@ public class EntityHerobrine extends EntityEnderman {
     }
 
     @Override
+    public void onLivingUpdate() {
+
+    }
+
+    @Override
     protected SoundEvent getAmbientSound() {
 
         return null;
