@@ -134,6 +134,7 @@ def resourceTargets = ['mcmod.info', 'pack.mcmeta']
 
 // Example for how to get properties into the manifest for reading at runtime.
 jar {
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
     manifest {
         attributes([
                 "Specification-Title"     : "hbmcmod",
