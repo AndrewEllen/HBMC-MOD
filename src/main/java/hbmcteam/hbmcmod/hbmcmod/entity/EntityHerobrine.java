@@ -16,7 +16,7 @@ public class EntityHerobrine extends EntityEnderman {
 
     @Override
     public void initEntityAI() {
-        this.tasks.addTask(1, new EntityAIWatchClosest(this, EntityPlayer.class, 100.0F));
+        this.tasks.addTask(0, new EntityAIWatchClosest(this, EntityPlayer.class, 10000.0F, 0));
     }
 
     @Override
