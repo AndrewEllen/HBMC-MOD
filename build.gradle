@@ -1,12 +1,18 @@
 buildscript {
     repositories {
         // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
-        maven { url = 'https://maven.minecraftforge.net' }
+        maven {
+            url = 'https://maven.minecraftforge.net'
+        }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
+}
+
+plugins {
+    id 'wtf.gofancy.fancygradle' version '1.+'
 }
 
 apply plugin: 'net.minecraftforge.gradle'
@@ -95,6 +101,8 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+    maven { url = 'https://sizableshrimp.me/maven' }
+
 }
 
 dependencies {
@@ -115,6 +123,14 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 }
+
+fancyGradle {
+    patches {
+        patch(wtf.gofancy.fancygradle.patch.Patch.RESOURCES, wtf.gofancy.fancygradle.patch.Patch.ASM)
+    }
+}
+
+def resourceTargets = ['mcmod.info', 'pack.mcmeta']
 
 // Example for how to get properties into the manifest for reading at runtime.
 jar {
