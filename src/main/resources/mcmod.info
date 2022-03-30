@@ -1,16 +1,19 @@
 [
-{
-  "modid": "hbmcmod",
-  "name": "HBMC",
-  "description": "The HBMC mod for 1.12.2",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "http:www.youtube.com/andye7gamingchannel",
-  "updateUrl": "",
-  "authorList": ["AndyE7", "Craftyman525"],
-  "credits": "MarcAura & Crylrex for their mod tutorial series",
-  "logoFile": "logo.png",
-  "screenshots": [],
-  "dependencies": []
-}
+  {
+    "modid": "hbmcmod",
+    "name": "Hbmcmod",
+    "description": "The HBMC mod for 1.12.2",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "AndyE7",
+      "Craftyman525"
+    ],
+    "credits": "",
+    "logoFile": "logo.png",
+    "screenshots": [],
+    "dependencies": []
+  }
 ]
