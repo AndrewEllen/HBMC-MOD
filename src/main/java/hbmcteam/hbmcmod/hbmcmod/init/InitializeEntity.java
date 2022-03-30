@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.registry.EntityRegistry;
 public class InitializeEntity {
 
     public static void RegisterEntities() {
-        RegisterEntity("HeroBrine", EntityHerobrine.class, Reference.ENTITY_HEROBRINE, 50, 13608848, 16777215);
+        RegisterEntity("Herobrine", EntityHerobrine.class, Reference.ENTITY_HEROBRINE, 50, 13608848, 16777215);
     }
 
     private static void RegisterEntity(

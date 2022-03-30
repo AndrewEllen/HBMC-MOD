@@ -2,6 +2,7 @@ package hbmcteam.hbmcmod.hbmcmod;
 
 import hbmcteam.hbmcmod.hbmcmod.proxy.CommonProxy;
 import hbmcteam.hbmcmod.hbmcmod.util.Reference;
+import hbmcteam.hbmcmod.hbmcmod.util.handlers.RegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -13,6 +14,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import java.io.File;
+
 @Mod(
         modid = Main.MOD_ID,
         name = Main.MOD_NAME,
@@ -21,8 +24,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class Main {
 
     public static final String MOD_ID = "hbmcmod";
-    public static final String MOD_NAME = "Hbmcmod";
-    public static final String VERSION = "1.0-SNAPSHOT";
+    public static final String MOD_NAME = "HBMC";
+    public static final String VERSION = "1.0";
 
     /**
      * This is the instance of your mod as created by Forge. It will never be null.
@@ -33,13 +36,15 @@ public class Main {
     @SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.COMMON)
     public static CommonProxy proxy;
 
+    public static File config;
+
     /**
      * This is the first initialization event. Register tile entities here.
      * The registry events below will have fired prior to entry to this method.
      */
     @Mod.EventHandler
     public static void preinit(FMLPreInitializationEvent event) {
-
+        RegistryHandler.preInitRegistries(event);
     }
 
     /**
